@@ -4,6 +4,7 @@ color2 FF7F50
 color3 87CEFF
 color4 7FFF00
 color5 87CEFA
+
 default_color Chartreuse
 default_outline_color Dark Cyan
 default_shade_color Dark Cyan
@@ -39,16 +40,18 @@ uppercase no
 use_spacer right
 use_xft yes
 xftalpha 0.8
-xftfont  Bitstream Vera Sans Mono:size=9
+xftfont  Inconsolata:size=9
+
 
 TEXT
 $color1$nodename     ${alignc}$sysname $kernel ${alignr}$color${time %l:%M:%p}
-${color1}Uptime:$color $uptime ${color1} Load:$color $loadavg
+${color1}Uptime:$color  $uptime ${color1} Load:$color $loadavg
 
 ${color2}${freq_g cpu0}Ghz
 ${color1}CPU0:$color ${cpu cpu0}% ${cpubar cpu0 5,85}${alignr 10}${color2}${hwmon 0 temp 1}C$alignr${color1}${cpugraph cpu0 32,120 104E8B FF7F50 -t}
 ${color2}${freq_g cpu1}Ghz
 ${color1}CPU1:$color ${cpu cpu1}% ${cpubar cpu1 5,85}${alignr 10}${color2}${hwmon 2 temp 1}C$alignr${color1}${cpugraph cpu1 32,120 104E8B FF7F50 -t}
+
 
 ${color1}RAM Usage:$color2 $mem/$memmax - $memperc% $membar
 ${color1}Entropy:$color ${entropy_avail}/${entropy_poolsize} ${entropy_bar}
