@@ -50,7 +50,6 @@ ${color1}CPU0:$color ${cpu cpu0}% ${cpubar cpu0 5,85}${alignr 10}${color2}${hwmo
 ${color2}${freq_g cpu1}Ghz
 ${color1}CPU1:$color ${cpu cpu1}% ${cpubar cpu1 5,85}${alignr 10}${color2}${hwmon 2 temp 1}C$alignr${color1}${cpugraph cpu1 32,120 104E8B FF7F50 -t}
 
-
 ${color1}RAM Usage:$color2 $mem/$memmax - $memperc% $membar
 ${color1}Entropy:$color ${entropy_avail}/${entropy_poolsize} ${entropy_bar}
 
@@ -69,3 +68,6 @@ $color ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
 $color ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 $color ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 $color ${top name 3} ${top pid 5} ${top cpu 5} ${top mem 5}
+
+${color3}Battery Status: ${color4}$battery_short
+${color5}Battery Left: ${color2}$battery_time
